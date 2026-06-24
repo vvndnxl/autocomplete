@@ -15,7 +15,7 @@ python -m pytest -vv tests
 
 Запуск теста с нагрузкой
 ```bash
-pip install -r tests/requirements-test.txt
+sudo apt update && sudo apt install -y wrk
 docker build -t autocomplete-api .
 docker run -d -p 8000:8000 autocomplete-api
 wrk -t12 -c400 -d30s "http://localhost:8000/autocomplete?prefix=a&limit=10"
