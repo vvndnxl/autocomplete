@@ -1,0 +1,7 @@
+pytest
+anyio
+httpx
+fastapi
+uvicorn
+sortedcontainers
+pydantic
