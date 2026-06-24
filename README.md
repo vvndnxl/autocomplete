@@ -10,10 +10,10 @@
 Запуск стандартных тестов:
 ```bash
 pip install -r tests/requirements-test.txt
-python -m pytest -vv tests/test_autocomplete.py
+python -m pytest -vv tests
 ```
 
-Запуск тестов с нагрузкой
+Запуск теста с нагрузкой
 ```bash
 pip install -r tests/requirements-test.txt
 docker build -t autocomplete-api .
@@ -21,7 +21,7 @@ docker run -d -p 8000:8000 autocomplete-api
 wrk -t12 -c400 -d30s "http://localhost:8000/autocomplete?prefix=a&limit=10"
 ```
 
-## Результаты тестов с нагрузкой
+## Результаты теста с нагрузкой
 ```text
 12 threads and 400 connections
     Thread Stats    Avg         Stdev       Max         +/- Stdev
